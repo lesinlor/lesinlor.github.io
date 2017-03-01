@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://lesinlor.github.io/myBlog/2017/02/28/虚拟机下nginx新建站点/index.html">
 <meta property="og:site_name" content="Lesinlor">
 <meta property="og:description" content="一开始在同事的帮助下成功安装了虚拟机，现在平日做demo也在虚拟机环境下运行，所以需要新建多个端口，也方便以后多个项目跑起来。">
-<meta property="og:updated_time" content="2017-02-28T07:49:26.000Z">
+<meta property="og:updated_time" content="2017-03-01T03:25:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机下nginx新建站点">
 <meta name="twitter:description" content="一开始在同事的帮助下成功安装了虚拟机，现在平日做demo也在虚拟机环境下运行，所以需要新建多个端口，也方便以后多个项目跑起来。">
@@ -342,6 +342,8 @@
 <p>之后要在<strong>sites-enabled</strong>文件夹下建立软连接<code>$ ln -s /etc/nginx/sites-available/beta /etc/nginx/sites-enabled/</code>前一个路径为文件的名字，后一个路径为要创建软连接的路径，必须都为绝对路径。</p>
 <p>更改完两处之后端口设置完成。</p>
 <h3 id="新建web"><a href="#新建web" class="headerlink" title="新建web"></a>新建web</h3><p>在本机或者虚拟机的共享目录下新建对应root的文件夹，并在文件夹下新建index便可以开始访问新的端口</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>不要忘记重启Nginx服务器:)   <code>$ sudo service nginx restart</code></p>
+<p>done!</p>
 
       
     </div>
@@ -518,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#找到nginx的目录"><span class="nav-number">1.</span> <span class="nav-text">找到nginx的目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进入nginx目录下"><span class="nav-number">2.</span> <span class="nav-text">进入nginx目录下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建web"><span class="nav-number">3.</span> <span class="nav-text">新建web</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#找到nginx的目录"><span class="nav-number">1.</span> <span class="nav-text">找到nginx的目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进入nginx目录下"><span class="nav-number">2.</span> <span class="nav-text">进入nginx目录下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建web"><span class="nav-number">3.</span> <span class="nav-text">新建web</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
