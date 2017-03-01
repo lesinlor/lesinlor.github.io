@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Node," />
 
 
 
@@ -87,16 +87,31 @@
 
 
 
-<meta name="description" content="一开始在同事的帮助下成功安装了虚拟机，现在平日做demo也在虚拟机环境下运行，所以需要新建多个端口，也方便以后多个项目跑起来。">
+<meta name="description" content="调用第三方接口中前台与后台的区别。
+
+
+在vue的学习之后，想着开发一个简单的APP，试一下Vue2.0的坑。然后用到了聚合的API，本来想着直接在前端页面中用ajax去获取，发现这样有很多缺点。
+
+前端调用接口Ajax XHR2XHR2是允许直接使用ajax进行跨域传输数据的，但是其中的规范比较麻烦，需要在接口设置Access-Control-Allow-Origin，所以如果第三方的接口没有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="虚拟机下nginx新建站点">
-<meta property="og:url" content="https://lesinlor.github.io/myBlog/2017/02/28/虚拟机下nginx新建站点/index.html">
+<meta property="og:title" content="使用Node后台调用接口">
+<meta property="og:url" content="https://lesinlor.github.io/myBlog/2017/03/01/使用Node后台调用接口/index.html">
 <meta property="og:site_name" content="Lesinlor">
-<meta property="og:description" content="一开始在同事的帮助下成功安装了虚拟机，现在平日做demo也在虚拟机环境下运行，所以需要新建多个端口，也方便以后多个项目跑起来。">
-<meta property="og:updated_time" content="2017-02-28T07:49:26.000Z">
+<meta property="og:description" content="调用第三方接口中前台与后台的区别。
+
+
+在vue的学习之后，想着开发一个简单的APP，试一下Vue2.0的坑。然后用到了聚合的API，本来想着直接在前端页面中用ajax去获取，发现这样有很多缺点。
+
+前端调用接口Ajax XHR2XHR2是允许直接使用ajax进行跨域传输数据的，但是其中的规范比较麻烦，需要在接口设置Access-Control-Allow-Origin，所以如果第三方的接口没有">
+<meta property="og:updated_time" content="2017-03-01T02:39:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="虚拟机下nginx新建站点">
-<meta name="twitter:description" content="一开始在同事的帮助下成功安装了虚拟机，现在平日做demo也在虚拟机环境下运行，所以需要新建多个端口，也方便以后多个项目跑起来。">
+<meta name="twitter:title" content="使用Node后台调用接口">
+<meta name="twitter:description" content="调用第三方接口中前台与后台的区别。
+
+
+在vue的学习之后，想着开发一个简单的APP，试一下Vue2.0的坑。然后用到了聚合的API，本来想着直接在前端页面中用ajax去获取，发现这样有很多缺点。
+
+前端调用接口Ajax XHR2XHR2是允许直接使用ajax进行跨域传输数据的，但是其中的规范比较麻烦，需要在接口设置Access-Control-Allow-Origin，所以如果第三方的接口没有">
 
 
 
@@ -124,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://lesinlor.github.io/myBlog/2017/02/28/虚拟机下nginx新建站点/"/>
+  <link rel="canonical" href="https://lesinlor.github.io/myBlog/2017/03/01/使用Node后台调用接口/"/>
 
 
 
 
 
-  <title> 虚拟机下nginx新建站点 | Lesinlor </title>
+  <title> 使用Node后台调用接口 | Lesinlor </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +274,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lesinlor.github.io/myBlog/2017/02/28/虚拟机下nginx新建站点/">
+    <link itemprop="mainEntityOfPage" href="https://lesinlor.github.io/myBlog/2017/03/01/使用Node后台调用接口/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lesinlor">
@@ -280,7 +295,7 @@
             
             
               
-                虚拟机下nginx新建站点
+                使用Node后台调用接口
               
             
           </h1>
@@ -295,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T14:53:49+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-01T09:15:00+08:00">
+                2017-03-01
               </time>
             
 
@@ -332,17 +347,26 @@
 
       
         <blockquote>
-<p>一开始在同事的帮助下成功安装了虚拟机，现在平日做demo也在虚拟机环境下运行，所以需要新建多个端口，也方便以后多个项目跑起来。</p>
+<p>调用第三方接口中前台与后台的区别。</p>
 </blockquote>
- <a id="more"></a>
-<h3 id="找到nginx的目录"><a href="#找到nginx的目录" class="headerlink" title="找到nginx的目录"></a>找到nginx的目录</h3><p> <code>$ whereis nginx</code></p>
-<h3 id="进入nginx目录下"><a href="#进入nginx目录下" class="headerlink" title="进入nginx目录下"></a>进入nginx目录下</h3><p> 命令行输入进入目录<code>$ cd sites-available</code>，此目录存放每一个端口的配置。</p>
-<p>default是默认端口，复制一个文件<code>$ sudo cp default test</code>，进行更改<code>$ sudo vim test</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">listen 8063;//监听端口</div><div class="line">#listen [::]:80 default_server ipv6only=on;</div><div class="line"></div><div class="line">root /vagrant_data/test;//共享目录下的文件夹</div><div class="line">index index.html index.htm index.php;</div><div class="line"></div><div class="line"># Make site accessible from http://localhost/</div><div class="line">server_name 0.0.0.0;</div><div class="line"></div><div class="line">location / &#123;</div><div class="line">        # First attempt to serve request as file, then</div><div class="line">        # as directory, then fall back to displaying a 404.</div><div class="line">        #try_files $uri $uri/ =404;</div><div class="line">        try_files $uri $uri/ /index.php?$uri&amp;$args;</div><div class="line">        # Uncomment to enable naxsi on this location</div><div class="line">        # include /etc/nginx/naxsi.rules</div><div class="line">&#125;</div><div class="line"></div><div class="line"># Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests</div><div class="line">#location /RequestDenied &#123;</div><div class="line">#       proxy_pass http://127.0.0.1:8080;    </div><div class="line">#&#125;</div><div class="line"></div><div class="line">#error_page 404 /404.html;</div><div class="line"># redirect server error pages to the static page /50x.html</div><div class="line">#</div><div class="line">#error_page 500 502 503 504 /50x.html;</div><div class="line">#location = /50x.html &#123;</div><div class="line">#       root /usr/share/nginx/html;</div><div class="line">#&#125;</div><div class="line"></div><div class="line"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</div><div class="line">#</div><div class="line">#location ~ \.php$ &#123;</div><div class="line">#       fastcgi_split_path_info ^(.+\.php)(/.+)$;</div><div class="line">#       # NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini</div><div class="line">#</div><div class="line">#       # With php5-cgi alone:</div><div class="line">#       fastcgi_pass 127.0.0.1:9000;</div><div class="line">#       # With php5-fpm:</div><div class="line">#       fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">#       fastcgi_index index.php;</div><div class="line">#       include fastcgi_params;</div><div class="line">#&#125;</div><div class="line">location ~ \.php$ &#123;</div><div class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</div><div class="line">#       # NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini</div><div class="line">#</div><div class="line">#       # With php5-cgi alone:</div><div class="line">#       fastcgi_pass 127.0.0.1:9000;</div><div class="line">#       # With php5-fpm:</div><div class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">        fastcgi_index index.php;</div><div class="line">        fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</div><div class="line">        include fastcgi_params;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>之后要在<strong>sites-enabled</strong>文件夹下建立软连接<code>$ ln -s /etc/nginx/sites-available/beta /etc/nginx/sites-enabled/</code>前一个路径为文件的名字，后一个路径为要创建软连接的路径，必须都为绝对路径。</p>
-<p>更改完两处之后端口设置完成。</p>
-<h3 id="新建web"><a href="#新建web" class="headerlink" title="新建web"></a>新建web</h3><p>在本机或者虚拟机的共享目录下新建对应root的文件夹，并在文件夹下新建index便可以开始访问新的端口</p>
-
+<hr>
+<p>在vue的学习之后，想着开发一个简单的APP，试一下Vue2.0的坑。然后用到了聚合的API，本来想着直接在前端页面中用ajax去获取，发现这样有很多缺点。</p>
+<hr>
+<h2 id="前端调用接口"><a href="#前端调用接口" class="headerlink" title="前端调用接口"></a>前端调用接口</h2><h3 id="Ajax-XHR2"><a href="#Ajax-XHR2" class="headerlink" title="Ajax XHR2"></a>Ajax XHR2</h3><p>XHR2是允许直接使用ajax进行跨域传输数据的，但是其中的规范比较麻烦，需要在接口设置Access-Control-Allow-Origin，所以如果第三方的接口没有开启的话是不能正常进行跨域的。</p>
+<p>需要在服务端设置:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">header(&apos;Access-Control-Allow-Origin:*&apos;); //*代表可访问的地址，可以设置指定域名</div><div class="line">header(&apos;Access-Control-Allow-Methods:POST,GET&apos;);</div></pre></td></tr></table></figure>
+<h3 id="Jsonp"><a href="#Jsonp" class="headerlink" title="Jsonp"></a>Jsonp</h3><p>jsonp进行跨域的原理是创建一个<script src="">标签，用类似CDN的方式去加载代码，然后再从获取的html中用DOM去查找数据。这种方式跟Ajax是完全不一样的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var url = &quot;http://example.com&quot;;</div><div class="line">var scriptTag = document.createElement(&quot;script&quot;); //创建一个script标签</div><div class="line">scriptTag.setAttribute(&quot;src&quot;,url); //设置script的src属性</div><div class="line">document.body.appendChild(scriptTag); //将script标签添加到body中</div><div class="line">//回调函数</div><div class="line">var jsonp_callback = function(resultObj)&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
+<li>在前端页面直接从第三方接口调取数据是很不安全的，比如用钱去申请的数据，会把key完全暴露出来。</li>
+<li>直接在前端页面跨越也存在接口设计的问题。</li>
+</ul>
+<h2 id="后端调用接口"><a href="#后端调用接口" class="headerlink" title="后端调用接口"></a>后端调用接口</h2><h3 id="为什么是Node"><a href="#为什么是Node" class="headerlink" title="为什么是Node"></a>为什么是Node</h3><p>在开发这个Vue应用，是用vue-cli进行项目构建的，也就是用webpack，然后使用webpack-dev-server的方式作为开发者调试，所以就干脆直接用Node和Express去调用接口好了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">router.get(&apos;/bus/:city/:bus&apos;,function(req,res)&#123;</div><div class="line">	var url = domain + &apos;busline?key=&apos; + key + &apos;&amp;city=&apos; + encodeURI(req.params.city) + &apos;&amp;bus=&apos; + encodeURI(req.params.bus);</div><div class="line">	console.log(url);</div><div class="line">	var html = &apos;&apos;;</div><div class="line">	http.get(url, function(_req,_res)&#123;</div><div class="line">		_req.on(&apos;data&apos;,function(_data)&#123;</div><div class="line">			html += _data;</div><div class="line">		&#125;);</div><div class="line">		_req.on(&apos;end&apos;,function()&#123;</div><div class="line">			res.send(html);</div><div class="line">		&#125;)</div><div class="line">	&#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>然后在前端就直接用传参ajax访问。</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>在查询聚合API的网站时，官方也是推荐使用服务器去调用并封装接口，所以无疑这种方式是最合适的。</p>
+<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>缺点就是node做为后台的话还是有比较多的坑，不像PHP这样稳定，如果是比较复杂的逻辑的话，用PHP还是比较好的。</p>
+</script></p>
       
     </div>
 
@@ -365,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/Node/" rel="tag"># Node</a>
           
         </div>
       
@@ -378,15 +402,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/28/使用nvm进行node版本管理/" rel="next" title="使用nvm进行node版本管理">
+                <i class="fa fa-chevron-left"></i> 使用nvm进行node版本管理
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/28/webpack-dev-server/" rel="prev" title="webpack-dev-server">
-                webpack-dev-server <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -518,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#找到nginx的目录"><span class="nav-number">1.</span> <span class="nav-text">找到nginx的目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进入nginx目录下"><span class="nav-number">2.</span> <span class="nav-text">进入nginx目录下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建web"><span class="nav-number">3.</span> <span class="nav-text">新建web</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端调用接口"><span class="nav-number">1.</span> <span class="nav-text">前端调用接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax-XHR2"><span class="nav-number">1.1.</span> <span class="nav-text">Ajax XHR2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jsonp"><span class="nav-number">1.2.</span> <span class="nav-text">Jsonp</span></a></li></ol></li></ol></div>
             
 
           </div>
