@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://lesinlor.github.io/myBlog/2017/03/29/vue-cli热刷新问题/index.html">
 <meta property="og:site_name" content="Lesinlor">
 <meta property="og:description" content="最近在写毕业论文的代码用到vue-cli，发现了跟之前同一个问题，它的热刷新功能失效了（在Linux环境下）！刷新页面都不行，只能重启服务器，这样的话要你何用！？">
-<meta property="og:updated_time" content="2017-03-29T03:11:20.000Z">
+<meta property="og:updated_time" content="2017-03-29T03:21:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-cli热刷新问题">
 <meta name="twitter:description" content="最近在写毕业论文的代码用到vue-cli，发现了跟之前同一个问题，它的热刷新功能失效了（在Linux环境下）！刷新页面都不行，只能重启服务器，这样的话要你何用！？">
@@ -357,7 +357,11 @@
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>在github上提一个issues，不知道能不能得到作者的回复，希望vue能越做越好！</p>
 <p>I run <code>init</code> <code>npm i</code> and <code>npm run dev</code> ,the hot reload doesn’t work even i reload the website.Only i reload the server that will reload what i change in the code.<br>After i changed some codes in  build/dev-server.js,hot reload run(line 26):</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> devMiddleware = <span class="built_in">require</span>(<span class="string">'webpack-dev-middleware'</span>)(compiler, &#123;</div><div class="line">  <span class="attr">publicPath</span>: webpackConfig.output.publicPath,</div><div class="line">  <span class="attr">quiet</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">stats</span>: &#123;</div><div class="line">    <span class="attr">colors</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">chunks</span>: <span class="literal">false</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">watchOptions</span>: &#123; <span class="comment">//Add Polling</span></div><div class="line">    aggregateTimeout: <span class="number">300</span>,</div><div class="line">    <span class="attr">poll</span>: <span class="number">1000</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>env:<br>system:  ubuntu-14.04-amd64<br>webpack:<br>node: v7.2.1/v.6.9.1<br>vue-cli: 2.5.1/2.8.1</p>
+<p>env:<br>system:  ubuntu-14.04-amd64</p>
+<p>webpack: </p>
+<p>node: v7.2.1/v.6.9.1</p>
+<p>vue-cli: 2.5.1/2.8.1</p>
+<p><a href="https://github.com/vuejs/vue-cli/issues/419" target="_blank" rel="external">issues地址</a></p>
 <hr>
 <p>结束</p>
 
